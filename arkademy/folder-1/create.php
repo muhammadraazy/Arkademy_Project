@@ -1,6 +1,6 @@
 <?php 
 require 'function.php';
-$student = query("SELECT * FROM student");
+$student = query("SELECT * FROM produk");
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +23,7 @@ $student = query("SELECT * FROM student");
 <th>gambar</th>
    </tr>
    <?php $i = 1; ?>
-        <?php foreach( $student as $row ) :  ?>
+        <?php foreach( $produk as $row ) :  ?>
 <tr>
     <td><?= $i; ?></td>
     <td>
