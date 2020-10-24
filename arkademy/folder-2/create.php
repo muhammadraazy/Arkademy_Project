@@ -1,10 +1,10 @@
 <?php 
 require 'functions.php';
-$student = query("SELECT * FROM student");
+$produk = query("SELECT * FROM produk");
 
 // cek apakah tombol cari sudah ditekan atau belum
 if( isset($_POST["cari"]) ) {
-    $student = cari($_POST["keyword"] );
+    $produk = cari($_POST["keyword"] );
 }
 ?>
 
@@ -92,7 +92,7 @@ if( isset($_POST["cari"]) ) {
 <th>gambar</th>
    </tr>
    <?php $i = 1; ?>
-        <?php foreach( $student as $row ) :  ?>
+        <?php foreach( $produk as $row ) :  ?>
 <tr>
     <td><?= $i; ?></td>
     <td>
