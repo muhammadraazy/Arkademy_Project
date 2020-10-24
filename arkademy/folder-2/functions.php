@@ -1,6 +1,6 @@
 <?php 
 // meghubungkan ke database (simpan koneksi database ke dalam varabel agar lebih mudah di gunakan)
-$konek = mysqli_connect("localhost", "root", "", "phpdasar");
+$konek = mysqli_connect("localhost", "root", "", "arkademy");
 
 function query($query) {
      global $konek;
@@ -17,15 +17,14 @@ function query($query) {
 
 function tambah($data) {
     global $konek;
-    $nama =htmlspecialchars($data["nama"]);
-    $nrp =htmlspecialchars($data["nrp"]);
-    $email = htmlspecialchars($data["email"]);
-    $jurusan =htmlspecialchars($data["jurusan"]);
-    $gambar = htmlspecialchars($data["gambar"]);
-
+    $nama =htmlspecialchars($data["nama_produk)"]);
+    $nrp =htmlspecialchars($data["keterangan"]);
+    $email = htmlspecialchars($data["harga"]);
+    $jurusan =htmlspecialchars($data["jumlah"]);
+ 
     // query tambah data
     $query = "INSERT INTO student VALUES 
-            ('', '$nama', '$nrp', '$email', '$jurusan', '$gambar')";
+            ('', '$nama', '$nrp', '$email', '$jurusan')";
     
     mysqli_query($konek, $query);
 
@@ -46,19 +45,18 @@ function hapus($id) {
 function ubah($data) {
     global $konek;
         $id = $data["id"];
-        $nama =htmlspecialchars($data["nama"]);
-        $nrp =htmlspecialchars($data["nrp"]);
-        $email = htmlspecialchars($data["email"]);
-        $jurusan =htmlspecialchars($data["jurusan"]);
-        $gambar = htmlspecialchars($data["gambar"]);
+        $nama =htmlspecialchars($data["nama_produk"]);
+        $nrp =htmlspecialchars($data["keterangan"]);
+        $email = htmlspecialchars($data["harga"]);
+        $jurusan =htmlspecialchars($data["jumlah"]);
+   
     
         // query tambah data
         $query = "UPDATE student SET
-                 nama = '$nama',
-                 nrp = '$nrp',
-                 email = '$email',
-                 jurusan = '$jurusan',
-                 gambar = '$gambar'
+                 nama = '$nama_produk',
+                 nrp = '$keterangan',
+                 email = '$harga',
+                 jurusan = '$jumlah'
                  WHERE id = $id
                  ";
         
