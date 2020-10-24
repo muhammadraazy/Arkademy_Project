@@ -1,6 +1,6 @@
 <?php 
 // meghubungkan ke database (simpan koneksi database ke dalam varabel agar lebih mudah di gunakan)
-$konek = mysqli_connect("localhost", "root", "", "phpdasar");
+$konek = mysqli_connect("localhost", "root", "", "arkademy");
 
 function query($query) {
      global $konek;
